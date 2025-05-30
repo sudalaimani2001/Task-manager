@@ -1,0 +1,55 @@
+.task-item {
+    min-height: 150px;
+    color: black;
+    // display: flex;
+    // align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+
+    &:hover {
+        background: #f0f0f0;
+    }
+
+    &.completed {
+        background: rgb(152, 255, 152);
+    }
+
+    .task-title {
+        flex: 1;
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+
+        button {
+            font-size: 1rem;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darkred;
+            }
+
+            &.delete {
+                background-color: red;
+            }
+
+            &.edit {
+                background-color: #007bff;
+            }
+        }
+
+    }
+
+}

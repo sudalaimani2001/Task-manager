@@ -1,0 +1,65 @@
+.filter-container {
+    .filters {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        button {
+            flex: 1;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &.active {
+                background-color: #0056b3;
+            }
+
+            &.all {
+                background-color: #7e7e7e;
+
+                &:hover {
+                    background-color: #5a5a5a;
+                }
+            }
+
+            &.completed {
+                background-color: #58d375;
+
+                &:hover {
+                    background-color: #3cbf5a;
+                }
+            }
+
+            &.pending {
+                background-color: #eacb6e;
+
+                &:hover {
+                    background-color: #d4b34c;
+                }
+            }
+
+        }
+    }
+
+    .task-list-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: auto;
+        gap: 10px;
+        margin-top: 1rem;
+    }
+}
+
+
+.loading {
+    text-align: center;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
