@@ -15,7 +15,7 @@ const TaskList: React.FC = () => {
   useEffect(() => {
     try {
       setLoading(true);
-      axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
+      axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
         .then(res => dispatch(fetchTasks(res.data.map((t: any) => ({ id: t.id, title: t.title, completed: t.completed })))));
     } catch (error) {
       setLoading(false);
